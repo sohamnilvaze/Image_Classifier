@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="text"], input[type="file"], button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Classification</h1>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label for="image_url">Image URL:</label>
+        <input type="text" id="image_url" name="image_url" accept="image/*" required><br><br>
+
+        <label for="label1">Candidate Label 1:</label>
+        <input type="text" id="label1" name="label1" required><br><br>
+
+        <label for="label2">Candidate Label 2:</label>
+        <input type="text" id="label2" name="label2" required><br><br>
+
+        <label for="label3">Candidate Label 3:</label>
+        <input type="text" id="label3" name="label3" required><br><br>
+
+        <label for="label4">Candidate Label 4:</label>
+        <input type="text" id="label4" name="label4" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
