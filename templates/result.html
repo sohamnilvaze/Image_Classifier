@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Result</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -81,6 +82,13 @@
             <span style="color: red;">The predicted label does not match any of the candidate labels.</span>
         {% endif %}
     </p>
-    <a href="/">Back to Home</a>
+
+    <h2>Score Comparison</h2>
+    <<img src="/plots/bar_chart.png" alt="Image" style="max-width: 500px; max-height: 500px;">
+
+    <a href="/" style="display: inline-block; margin-top: 20px; text-decoration: none; color: #007BFF;">Back to Home</a>
+    
+
+    
 </body>
 </html>
